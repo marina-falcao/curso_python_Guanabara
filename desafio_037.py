@@ -1,12 +1,17 @@
 num = int(input("Digite um número inteiro: "))
-opcao = int(input("Digite 1 para converter o número para binário, 2 para octal e 3 para hexadecimal: "))
 
+print('''Escolha uma das opções para conversão:
+[ 1 ] converter para binário
+[ 2 ] converter para octal
+[ 3 ] converter para hexadecimal ''')
+
+opcao = int(input("Sua opção: "))
 if opcao == 1:
-    print("O número escolhido corresponde a:", bin(num))
+    print("O número escolhido corresponde a:", bin(num)[2:])
 elif opcao == 2:
-    print("O número escolhido corresponde a:", oct(num))
+    print("O número escolhido corresponde a:", oct(num)[2:])
 elif opcao == 3:
-    print("O número escolhido corresponde a:", hex(num))
+    print("O número escolhido corresponde a:", hex(num)[2:])
 else:
     print("Opção inválida, tente novamente.")
 
